@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daizheng-z.github.io</id>
     <title>深海的大菠萝</title>
-    <updated>2022-04-13T17:19:31.050Z</updated>
+    <updated>2022-04-13T17:20:34.774Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://daizheng-z.github.io"/>
     <link rel="self" href="https://daizheng-z.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://daizheng-z.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 深海的大菠萝</rights>
     <entry>
-        <title type="html"><![CDATA[Markdown 入门]]></title>
+        <title type="html"><![CDATA[Markdown 入门（一）]]></title>
         <id>https://daizheng-z.github.io/post/markdown-ru-men/</id>
         <link href="https://daizheng-z.github.io/post/markdown-ru-men/">
         </link>
