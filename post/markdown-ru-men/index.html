@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Markdown 入门 | 深海的大菠萝</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://daizheng-z.github.io/favicon.ico?v=1649869839541">
+<link rel="stylesheet" href="https://daizheng-z.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="目前大多数博客基本都是使用Markdown语言编写文章，Markdown语言也确实可以很方便的编写出好看的网页文档，这里搬运一下菜鸟教程中的Markdown教程，方便之后写博客使用~
+Markdown标题
+标题有6个等级，书写格式为n个#号..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://daizheng-z.github.io">
+        <img src="https://daizheng-z.github.io/images/avatar.png?v=1649869839541" class="site-logo">
+        <h1 class="site-title">深海的大菠萝</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      个人博客
+    </div>
+    <div class="site-footer">
+      Powered by  <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://daizheng-z.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Markdown 入门</h2>
+            <div class="post-date">2022-04-13</div>
+            
+            <div class="post-content" v-pre>
+              <p>目前大多数博客基本都是使用Markdown语言编写文章，Markdown语言也确实可以很方便的编写出好看的网页文档，这里搬运一下菜鸟教程中的Markdown教程，方便之后写博客使用~</p>
+<h1 id="markdown标题">Markdown标题</h1>
+<p>标题有6个等级，书写格式为n个#号+空格+标题文字</p>
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<p>显示效果：</p>
+<h1 id="一级标题">一级标题</h1>
+<h2 id="二级标题">二级标题</h2>
+<h3 id="三级标题">三级标题</h3>
+<h4 id="四级标题">四级标题</h4>
+<h5 id="五级标题">五级标题</h5>
+<h6 id="六级标题">六级标题</h6>
+<p>显示效果可能与网站主题有关，这里到四级标题开始就没有变化了。</p>
+<p>标题只有6个等级，7个#号开始会变成普通文本（做个边界测试哈哈哈）</p>
+<pre><code>####### 七级标题
+</code></pre>
+<p>显示效果：</p>
+<p>####### 七级标题</p>
+<h1 id="markdown格式">Markdown格式</h1>
+<h2 id="粗体-斜体-粗斜体">粗体、斜体、粗斜体</h2>
+<pre><code>*斜体文本*
+_斜体文本_
+**粗体文本**
+__粗体文本__
+***粗斜体文本***
+___粗斜体文本___
+</code></pre>
+<p>显示效果：</p>
+<p><em>斜体文本</em><br>
+<em>斜体文本</em><br>
+<strong>粗体文本</strong><br>
+<strong>粗体文本</strong><br>
+<em><strong>粗斜体文本</strong></em><br>
+<em><strong>粗斜体文本</strong></em></p>
+<h2 id="分隔线">分隔线</h2>
+<pre><code>***
+
+* * *
+
+*****
+
+- - -
+
+----------
+</code></pre>
+<p>显示效果：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="删除线-下划线">删除线、下划线</h2>
+<pre><code>没删
+没删
+~~删了~~
+&lt;u&gt;带下划线&lt;/u&gt;
+</code></pre>
+<p>显示效果：</p>
+<p>没删<br>
+没删<br>
+<s>哎，删了</s><br>
+<u>带下划线</u></p>
+<h2 id="引用">引用</h2>
+<p>使用[^引用名]的方式为文中内容添加参考文献或注释。</p>
+<pre><code>这篇博客主要内容来自于菜鸟教程[^RUNOOB]
+
+[^RUNOOB]: 菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+</code></pre>
+<p>这篇博客主要内容来自于菜鸟教程<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h1 id="列表">列表</h1>
+<h2 id="无序列表">无序列表</h2>
+<p>*、+、- 都可以</p>
+<pre><code>* 第一项
+* 第二项
+* 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+
+- 第一项
+- 第二项
+- 第三项
+</code></pre>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<h2 id="有序列表">有序列表</h2>
+<pre><code>1. 第一项
+2. 第二项
+3. 第三项
+</code></pre>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h2 id="列表嵌套">列表嵌套</h2>
+<p>在子列表前面加上tab或四个空格即可</p>
+<pre><code>1. 第一项
+    - 子项一
+    - 子项二
+2. 第二项
+3. 第三项
+</code></pre>
+<ol>
+<li>第一项
+<ul>
+<li>子项一</li>
+<li>子项二</li>
+</ul>
+</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h1 id="区块">区块</h1>
+<p>使用&gt;构成区块</p>
+<pre><code>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; &gt; &gt; 第二层嵌套
+</code></pre>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>菜鸟教程 -- 学的不仅是技术，更是梦想！！！ <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://daizheng-z.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
