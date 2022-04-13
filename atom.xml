@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://daizheng-z.github.io</id>
     <title>深海的大菠萝</title>
-    <updated>2022-04-13T17:10:43.699Z</updated>
+    <updated>2022-04-13T17:16:12.042Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://daizheng-z.github.io"/>
     <link rel="self" href="https://daizheng-z.github.io/atom.xml"/>
@@ -150,15 +150,19 @@ ___粗斜体文本___
 <li>第三项</li>
 </ol>
 <h1 id="区块">区块</h1>
-<p>使用&gt;构成区块</p>
+<p>使用&gt;构成区块，区块不同于列表，嵌套使用时只能向下或平级嵌套，回到上层需要空一行重新开启</p>
 <pre><code>&gt; 最外层
-&gt; &gt; 第一层嵌套
 &gt; 最外层
+&gt; &gt; 第一层嵌套
+
+&gt; 最外层
+&gt; &gt; 第一层嵌套
 &gt; &gt; 第一层嵌套
 &gt; &gt; &gt; 第二层嵌套
 </code></pre>
 <blockquote>
-<p>最外层</p>
+<p>最外层<br>
+最外层</p>
 <blockquote>
 <p>第一层嵌套</p>
 </blockquote>
@@ -166,10 +170,25 @@ ___粗斜体文本___
 <blockquote>
 <p>最外层</p>
 <blockquote>
-<p>第一层嵌套</p>
+<p>第一层嵌套<br>
+第一层嵌套</p>
 <blockquote>
 <p>第二层嵌套</p>
 </blockquote>
+</blockquote>
+</blockquote>
+<p>向上嵌套失效的例子：</p>
+<pre><code>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; 最外层
+&gt; &gt;  第二层嵌套
+</code></pre>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套<br>
+最外层<br>
+第二层嵌套</p>
 </blockquote>
 </blockquote>
 <hr class="footnotes-sep">

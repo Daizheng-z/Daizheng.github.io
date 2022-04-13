@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://daizheng-z.github.io/favicon.ico?v=1649869839541">
+<link rel="shortcut icon" href="https://daizheng-z.github.io/favicon.ico?v=1649870169985">
 <link rel="stylesheet" href="https://daizheng-z.github.io/styles/main.css">
 
 
@@ -30,7 +30,7 @@ Markdown标题
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://daizheng-z.github.io">
-        <img src="https://daizheng-z.github.io/images/avatar.png?v=1649869839541" class="site-logo">
+        <img src="https://daizheng-z.github.io/images/avatar.png?v=1649870169985" class="site-logo">
         <h1 class="site-title">深海的大菠萝</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -230,15 +230,19 @@ ___粗斜体文本___
 <li>第三项</li>
 </ol>
 <h1 id="区块">区块</h1>
-<p>使用&gt;构成区块</p>
+<p>使用&gt;构成区块，区块不同于列表，嵌套使用时只能向下或平级嵌套，回到上层需要空一行重新开启</p>
 <pre><code>&gt; 最外层
-&gt; &gt; 第一层嵌套
 &gt; 最外层
+&gt; &gt; 第一层嵌套
+
+&gt; 最外层
+&gt; &gt; 第一层嵌套
 &gt; &gt; 第一层嵌套
 &gt; &gt; &gt; 第二层嵌套
 </code></pre>
 <blockquote>
-<p>最外层</p>
+<p>最外层<br>
+最外层</p>
 <blockquote>
 <p>第一层嵌套</p>
 </blockquote>
@@ -246,10 +250,25 @@ ___粗斜体文本___
 <blockquote>
 <p>最外层</p>
 <blockquote>
-<p>第一层嵌套</p>
+<p>第一层嵌套<br>
+第一层嵌套</p>
 <blockquote>
 <p>第二层嵌套</p>
 </blockquote>
+</blockquote>
+</blockquote>
+<p>向上嵌套失效的例子：</p>
+<pre><code>&gt; 最外层
+&gt; &gt; 第一层嵌套
+&gt; 最外层
+&gt; &gt;  第二层嵌套
+</code></pre>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套<br>
+最外层<br>
+第二层嵌套</p>
 </blockquote>
 </blockquote>
 <hr class="footnotes-sep">
